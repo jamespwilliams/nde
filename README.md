@@ -1,8 +1,10 @@
 # nde
 
+⚠️ WIP ⚠️ 
+
 [![asciicast](https://asciinema.org/a/498457.svg)](https://asciinema.org/a/498457)
 
-A neovim development environment, that can be spun up in a single command.
+A neovim development environment that can be spun up in a single command.
 
 First,
 [install Nix](https://nix.dev/tutorials/install-nix) and [enable Nix
