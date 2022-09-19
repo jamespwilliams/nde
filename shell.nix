@@ -35,9 +35,7 @@ let
             bat-vim
             nvim-lspconfig
             (nvim-treesitter.withPlugins (
-              plugins: with plugins; [
-                tree-sitter-go
-              ]
+              plugins: pkgs.tree-sitter.allGrammars
             ))
             sensible
           ];
