@@ -66,6 +66,21 @@ end
 
 lspconfig.gopls.setup {on_attach = on_attach}
 
+lspconfig.sumneko_lua.setup {
+    on_attach = on_attach,
+    settings = {
+        runtime = {
+            -- Tell the language server which version of Lua you're using (most likely LuaJIT in the case of Neovim)
+            version = 'LuaJIT'
+        },
+        diagnostics = {globals = {'vim'}},
+        workspace = {
+            -- Make the server aware of Neovim runtime files
+            library = vim.api.nvim_get_runtime_file("", true)
+        }
+    }
+}
+
 -- https://github.com/golang/tools/blob/1f10767725e2be1265bef144f774dc1b59ead6dd/gopls/doc/vim.md#imports
 function OrgImports(wait_ms)
     local params = vim.lsp.util.make_range_params()

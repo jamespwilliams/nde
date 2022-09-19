@@ -48,6 +48,7 @@ mkShell {
     go_1_18
     gopls
     overriden-neovim
+    sumneko-lua-language-server
     tmux
   ];
 }
