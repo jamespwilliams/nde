@@ -66,6 +66,8 @@ end
 
 lspconfig.gopls.setup { on_attach = on_attach }
 
+lspconfig.rnix.setup { on_attach = on_attach }
+
 lspconfig.sumneko_lua.setup {
     on_attach = on_attach,
     settings = {
@@ -117,7 +119,7 @@ vim.api.nvim_create_autocmd("BufWritePre", {
 })
 
 vim.api.nvim_create_autocmd("BufWritePre", {
-    pattern = { '*.lua' },
+    pattern = { '*.lua', '*.nix' },
     callback = function() vim.lsp.buf.formatting_sync() end,
     group = vim.api.nvim_create_augroup("lsp_document_format", { clear = true })
 })

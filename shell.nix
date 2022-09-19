@@ -1,4 +1,4 @@
-{ pkgs ? import <nixpkgs> {} }:
+{ pkgs ? import <nixpkgs> { } }:
 
 with pkgs;
 
@@ -39,8 +39,8 @@ let
             ))
             sensible
           ];
-        }; 
-      };     
+        };
+      };
     };
 in
 mkShell {
@@ -48,6 +48,7 @@ mkShell {
     go_1_18
     gopls
     overriden-neovim
+    rnix-lsp
     sumneko-lua-language-server
     tmux
   ];
