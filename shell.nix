@@ -47,6 +47,7 @@ mkShell {
   nativeBuildInputs = [
     go_1_18
     gopls
+    nodePackages.vim-language-server
     overriden-neovim
     rnix-lsp
     sumneko-lua-language-server

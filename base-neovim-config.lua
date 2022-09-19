@@ -68,6 +68,8 @@ lspconfig.gopls.setup { on_attach = on_attach }
 
 lspconfig.rnix.setup { on_attach = on_attach }
 
+lspconfig.vimls.setup { on_attach = on_attach, isNeovim = true }
+
 lspconfig.sumneko_lua.setup {
     on_attach = on_attach,
     settings = {
@@ -110,16 +112,15 @@ function OrgImports(wait_ms)
 end
 
 vim.api.nvim_create_autocmd("BufWritePre", {
-    pattern = { '*.go' },
-    callback = function()
-        vim.lsp.buf.formatting_sync()
-        OrgImports(1000)
-    end,
+    pattern = { '*' },
+    callback = function() vim.lsp.buf.formatting_sync() end,
     group = vim.api.nvim_create_augroup("lsp_document_format", { clear = true })
 })
 
 vim.api.nvim_create_autocmd("BufWritePre", {
-    pattern = { '*.lua', '*.nix' },
-    callback = function() vim.lsp.buf.formatting_sync() end,
-    group = vim.api.nvim_create_augroup("lsp_document_format", { clear = true })
+    pattern = { '*.go' },
+    callback = function()
+        OrgImports(1000)
+    end,
+    group = vim.api.nvim_create_augroup("lsp_document_format", { clear = false })
 })
