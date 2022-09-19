@@ -22,14 +22,26 @@ but extended to be much more opinionated, and languages (TODO)).
 This derivation is tailored to my own needs. Currently, the following are
 provided:
 
-* go (at the time of writing, version 1.18.2)
-* gopls (the official Go language server)
+**Editor**
+
 * neovim
-* nvim-lspconfig
-    * and configuration to get it to work with gopls
-    * plus configuration to automatically fix up imports
-* nvim-treesitter configuration for Go
+* nvim-lspconfig, plus configuration to use all of the **Supported Language
+  Servers** listed below
+* nvim-treesitter configuration for most languages (all those in nixpkgs'
+  `pkgs.tree-sitter.allGrammars`)
 * [bat.vim](https://github.com/jamespwilliams/bat.vim), my own Vim theme, which
   has extra rules for highlighting treesitter-parsed Go files
 * [vim-sensible](https://github.com/tpope/vim-sensible), Tim Pope's set of sane
   defaults for Vim
+
+**Supported Language Servers**
+
+* [gopls](https://pkg.go.dev/golang.org/x/tools/gopls)
+* [lua-language-server](https://github.com/sumneko/lua-language-server)
+* [vim-language-server](https://github.com/iamcco/vim-language-server)
+
+(more to come...)
+
+**Languages**
+
+* go (at the time of writing, version 1.18.2)
