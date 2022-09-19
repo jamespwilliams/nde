@@ -124,3 +124,7 @@ vim.api.nvim_create_autocmd("BufWritePre", {
     end,
     group = vim.api.nvim_create_augroup("lsp_document_format", { clear = false })
 })
+
+-- fzf:
+vim.api.nvim_set_keymap('n', '<C-p>', '<cmd>Files<CR>', opts)
+vim.api.nvim_set_keymap('n', '<C-g>', '<cmd>Rg<CR>', opts)

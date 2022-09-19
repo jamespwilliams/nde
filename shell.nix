@@ -1,13 +1,13 @@
 { pkgs ? import <nixpkgs> { } }:
 
-with pkgs;
-
 let
   lspVimrcConfig = builtins.readFile ./base-neovim-config.lua;
 
   extraConfig = builtins.readFile ./extra-neovim-config.vim;
 
   vimrc = ''
+    source ${pkgs.fzf.out}/share/vim-plugins/fzf/plugin/fzf.vim
+
     lua << EOF
     ${lspVimrcConfig}
     EOF
@@ -33,6 +33,7 @@ let
         packages.packages = with pkgs.vimPlugins; {
           start = [
             bat-vim
+            fzf-vim
             nvim-lspconfig
             (nvim-treesitter.withPlugins (
               plugins: pkgs.tree-sitter.allGrammars
@@ -43,12 +44,14 @@ let
       };
     };
 in
-mkShell {
+with pkgs; mkShell {
   nativeBuildInputs = [
+    fzf
     go_1_18
     gopls
     nodePackages.vim-language-server
     overriden-neovim
+    ripgrep
     rnix-lsp
     sumneko-lua-language-server
     tmux
