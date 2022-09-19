@@ -1,12 +1,16 @@
 local lspconfig          = require 'lspconfig'
 local treesitter_configs = require 'nvim-treesitter.configs'
 
+local treesitter_parser_install_dir = '/var/tmp/nvim-treesitter/parser'
+
 treesitter_configs.setup {
   ensure_installed = {'go'},
+  parser_install_dir = treesitter_parser_install_dir,
   highlight = {
     enable = true,
   },
 }
+vim.opt.runtimepath:append(treesitter_parser_install_dir)
 
 -- Mappings (adapted from https://github.com/neovim/nvim-lspconfig#suggested-configuration)
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
