@@ -17,10 +17,9 @@ nix develop github:jamespwilliams/nde
 (originally based on https://github.com/jamespwilliams/neovim-go-nix-develop,
 but extended to be much more opinionated, and languages (TODO)).
 
-### Components
+## Components
 
-This derivation is tailored to my own needs. Currently, the following are
-provided:
+Currently, the following are provided (PRs welcome to add more):
 
 **Editor**
 
@@ -45,3 +44,52 @@ provided:
 **Languages**
 
 * go (at the time of writing, version 1.18.2)
+
+## Optional installation steps
+
+### Shell alias
+
+For convenience, consider adding `alias nde=nix develop github:jamespwilliams/nde`
+to your `.bashrc` or equivalent:
+
+**bash**:
+
+```
+echo alias nde=\'nix develop github:jamespwilliams/nde\' >> ~/.bashrc
+```
+
+**zsh**:
+
+```
+echo alias nde=\'nix develop github:jamespwilliams/nde\' >> ~/.zshrc
+```
+
+**fish**:
+
+```
+echo alias nde=\'nix develop github:jamespwilliams/nde\' >> ~/.config/fish/config.fish
+```
+
+### Start automatically in new shells
+
+You can add `nix develop github:jamespwilliams/nde` to the very end of your
+`.bashrc` (or equivalent), which will mean that you're always launched into the
+environment when you start a new shell.
+
+**bash**:
+
+```
+echo nix develop github:jamespwilliams/nde >> ~/.bashrc
+```
+
+**zsh**:
+
+```
+echo nix develop github:jamespwilliams/nde >> ~/.zshrc
+```
+
+**fish**:
+
+```
+echo nix develop github:jamespwilliams/nde >> ~/.config/fish/config.fish
+```
