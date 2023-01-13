@@ -92,6 +92,18 @@ local set_up_lsps = function()
             }
         }
     }
+
+    local rt = require("rust-tools")
+    rt.setup({
+        tools = {
+            inlay_hints = {
+                auto = true,
+            },
+        },
+        server = {
+            on_attach = on_lsp_attach,
+        },
+    })
 end
 
 local set_up_lsp_autoformatting = function()

@@ -38,19 +38,15 @@ Currently, the following are provided (PRs welcome to add more):
 * [vim-sensible](https://github.com/tpope/vim-sensible), Tim Pope's set of sane
   defaults for Vim
 
-**Supported Language Servers**
+**Supported Languages**
 
-* Go: [gopls](https://pkg.go.dev/golang.org/x/tools/gopls)
-* Python: [pyright](https://github.com/microsoft/pyright)
+* Go (1.18.2) with [gopls](https://pkg.go.dev/golang.org/x/tools/gopls)
+* Rust (1.63.0) with [rust-analyzer](https://rust-analyzer.github.io/)
+* Python (3.10.6) with [pyright](https://github.com/microsoft/pyright)
 * Lua: [lua-language-server](https://github.com/sumneko/lua-language-server)
 * Vimscript: [vim-language-server](https://github.com/iamcco/vim-language-server)
 
 (more to come...)
-
-**Languages**
-
-* Go (at the time of writing, version 1.18.2)
-* Python (at the time of writing, version 3.10.6)
 
 ## Optional installation steps
 

@@ -38,6 +38,7 @@ let
             (nvim-treesitter.withPlugins (
               plugins: pkgs.tree-sitter.allGrammars
             ))
+            rust-tools-nvim
             sensible
           ];
         };
@@ -58,5 +59,10 @@ with pkgs; mkShell {
 
     python3
     pyright
+
+    cargo
+    rustc
+    rustfmt
+    rust-analyzer
   ];
 }
