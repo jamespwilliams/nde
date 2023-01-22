@@ -49,8 +49,8 @@ Currently, the following are provided (PRs welcome to add more):
 
 **Languages**
 
-* go (at the time of writing, version 1.18.2)
-* python (at the time of writing, version 3.10.6)
+* Go (at the time of writing, version 1.18.2)
+* Python (at the time of writing, version 3.10.6)
 
 ## Optional installation steps
 
