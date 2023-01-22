@@ -55,5 +55,8 @@ with pkgs; mkShell {
     rnix-lsp
     sumneko-lua-language-server
     tmux
+
+    python3
+    pyright
   ];
 }
