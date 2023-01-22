@@ -2,7 +2,7 @@
 
 ⚠️ WIP ⚠️ 
 
-[![asciicast](https://raw.githubusercontent.com/jamespwilliams/nde/assets/nde.png)](https://asciinema.org/a/498457)
+[![asciicast](https://raw.githubusercontent.com/jamespwilliams/nde/feccaff84707d39cfe3843ad5fe12992cd279979/nde.png)](https://asciinema.org/a/498457)
 
 A modern neovim development environment, using
 [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig) and
