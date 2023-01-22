@@ -4,7 +4,12 @@
 
 [![asciicast](https://asciinema.org/a/498457.svg)](https://asciinema.org/a/498457)
 
-A neovim development environment that can be spun up in a single command.
+A modern neovim development environment, using
+[nvim-lspconfig](https://github.com/neovim/nvim-lspconfig) and
+[nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter), that can
+be spun up in a single command.
+
+## Usage
 
 First,
 [install Nix](https://nix.dev/tutorials/install-nix) and [enable Nix
@@ -35,10 +40,10 @@ Currently, the following are provided (PRs welcome to add more):
 
 **Supported Language Servers**
 
-* [gopls](https://pkg.go.dev/golang.org/x/tools/gopls)
-* [pyright](https://github.com/microsoft/pyright)
-* [lua-language-server](https://github.com/sumneko/lua-language-server)
-* [vim-language-server](https://github.com/iamcco/vim-language-server)
+* Go: [gopls](https://pkg.go.dev/golang.org/x/tools/gopls)
+* Python: [pyright](https://github.com/microsoft/pyright)
+* Lua: [lua-language-server](https://github.com/sumneko/lua-language-server)
+* Vimscript: [vim-language-server](https://github.com/iamcco/vim-language-server)
 
 (more to come...)
 
