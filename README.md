@@ -43,10 +43,9 @@ Currently, the following are provided (PRs welcome to add more):
 * Go (1.18.2) with [gopls](https://pkg.go.dev/golang.org/x/tools/gopls)
 * Rust (1.63.0) with [rust-analyzer](https://rust-analyzer.github.io/)
 * Python (3.10.6) with [pyright](https://github.com/microsoft/pyright)
-* Lua: [lua-language-server](https://github.com/sumneko/lua-language-server)
-* Vimscript: [vim-language-server](https://github.com/iamcco/vim-language-server)
-
-(more to come...)
+* Perl (5.36.0) with [perl-language-server](https://github.com/FractalBoy/perl-language-server)
+* Lua with [lua-language-server](https://github.com/sumneko/lua-language-server)
+* Vimscript with [vim-language-server](https://github.com/iamcco/vim-language-server)
 
 ## Optional installation steps
 

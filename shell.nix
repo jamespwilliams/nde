@@ -64,5 +64,8 @@ with pkgs; mkShell {
     rustc
     rustfmt
     rust-analyzer
+
+    perl
+    perlPackages.PLS
   ];
 }
