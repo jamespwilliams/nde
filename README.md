@@ -52,7 +52,7 @@ Currently, the following are provided (PRs welcome to add more):
 
 ### Shell alias
 
-For convenience, consider adding `alias nde=nix develop github:jamespwilliams/nde`
+For convenience, consider adding `alias nde='nix develop github:jamespwilliams/nde'`
 to your `.bashrc` or equivalent:
 
 **bash**:
