@@ -44,6 +44,7 @@ Currently, the following are provided (PRs welcome to add more):
 * Rust (1.63.0) with [rust-analyzer](https://rust-analyzer.github.io/)
 * Python (3.10.6) with [pyright](https://github.com/microsoft/pyright)
 * Perl (5.36.0) with [perl-language-server](https://github.com/FractalBoy/perl-language-server)
+* Typescript (4.8.3) with [typescript-language-server](https://github.com/typescript-language-server/typescript-language-server)
 * Lua with [lua-language-server](https://github.com/sumneko/lua-language-server)
 * Vimscript with [vim-language-server](https://github.com/iamcco/vim-language-server)
 

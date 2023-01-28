@@ -70,6 +70,7 @@ local set_up_lsps = function()
     lspconfig.perlpls.setup { on_attach = on_lsp_attach }
     lspconfig.pyright.setup { on_attach = on_lsp_attach }
     lspconfig.rnix.setup { on_attach = on_lsp_attach }
+    lspconfig.tsserver.setup { on_attach = on_lsp_attach }
     lspconfig.vimls.setup { on_attach = on_lsp_attach, isNeovim = true }
     lspconfig.sumneko_lua.setup {
         on_attach = on_lsp_attach,

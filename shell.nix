@@ -67,5 +67,8 @@ with pkgs; mkShell {
 
     perl
     perlPackages.PLS
+
+    nodePackages.typescript
+    nodePackages.typescript-language-server
   ];
 }
