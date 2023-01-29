@@ -19,9 +19,6 @@ flakes](https://nixos.wiki/wiki/Flakes#Installing_flakes). Then:
 nix develop github:jamespwilliams/nde
 ```
 
-(originally based on https://github.com/jamespwilliams/neovim-go-nix-develop,
-but extended to be much more opinionated, and languages (TODO)).
-
 ## Components
 
 Currently, the following are provided (PRs welcome to add more):
