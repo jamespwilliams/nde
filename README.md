@@ -37,7 +37,7 @@ Currently, the following are provided (PRs welcome to add more):
 
 **Supported Languages**
 
-* Go (1.18.2) with [gopls](https://pkg.go.dev/golang.org/x/tools/gopls)
+* Go (1.19.1) with [gopls](https://pkg.go.dev/golang.org/x/tools/gopls)
 * Rust (1.63.0) with [rust-analyzer](https://rust-analyzer.github.io/)
 * Python (3.10.6) with [pyright](https://github.com/microsoft/pyright)
 * Perl (5.36.0) with [perl-language-server](https://github.com/FractalBoy/perl-language-server)
