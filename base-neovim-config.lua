@@ -67,7 +67,14 @@ local set_up_lsps = function()
     end
 
     lspconfig.gopls.setup { on_attach = on_lsp_attach }
-    lspconfig.perlpls.setup { on_attach = on_lsp_attach }
+    lspconfig.perlpls.setup {
+        on_attach = on_lsp_attach,
+        settings = {
+            perl = {
+                perlcritic = { enabled = true },
+            },
+        },
+    }
     lspconfig.pyright.setup { on_attach = on_lsp_attach }
     lspconfig.rnix.setup { on_attach = on_lsp_attach }
     lspconfig.tsserver.setup { on_attach = on_lsp_attach }
