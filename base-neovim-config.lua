@@ -51,6 +51,9 @@ local set_up_treesitter = function()
         highlight = { enable = true }
     }
     vim.opt.runtimepath:append(treesitter_parser_install_dir)
+
+    local ft_to_parser = require "nvim-treesitter.parsers".filetype_to_parsername
+    ft_to_parser.terraform = "hcl" -- the terraform filetype will use the hcl parser and queries.
 end
 
 local set_up_diagnostic_keybindings = function()
@@ -77,6 +80,7 @@ local set_up_lsps = function()
     }
     lspconfig.pyright.setup { on_attach = on_lsp_attach }
     lspconfig.rnix.setup { on_attach = on_lsp_attach }
+    lspconfig.terraformls.setup { on_attach = on_lsp_attach }
     lspconfig.tsserver.setup { on_attach = on_lsp_attach }
     lspconfig.vimls.setup { on_attach = on_lsp_attach, isNeovim = true }
     lspconfig.sumneko_lua.setup {

@@ -44,6 +44,7 @@ Currently, the following are provided (PRs welcome to add more):
 * Typescript (4.8.3) with [typescript-language-server](https://github.com/typescript-language-server/typescript-language-server)
 * Lua with [lua-language-server](https://github.com/sumneko/lua-language-server)
 * Vimscript with [vim-language-server](https://github.com/iamcco/vim-language-server)
+* Terraform with [terraform-ls](https://github.com/hashicorp/terraform-ls)
 
 ## Optional installation steps
 

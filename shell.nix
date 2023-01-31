@@ -70,5 +70,7 @@ with pkgs; mkShell {
 
     nodePackages.typescript
     nodePackages.typescript-language-server
+
+    terraform-ls
   ];
 }
