@@ -17,6 +17,15 @@ flakes](https://nixos.wiki/wiki/Flakes#Installing_flakes). Then:
 nix develop github:jamespwilliams/nde
 ```
 
+### Adding your own customizations
+
+vim configuration is very personal - everyone has their own preferences. I'd
+encourage you to fork this repo and add whatever customizations you'd like to
+your fork.
+
+If you add your changes to `extra-neovim-config.vim`, you should be able to
+merge in changes from this repo fairly easily.
+
 ## Components
 
 Currently, the following are provided (PRs welcome to add more):
