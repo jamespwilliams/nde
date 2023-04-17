@@ -94,3 +94,17 @@ echo nix develop github:jamespwilliams/nde >> ~/.zshrc
 ```
 echo nix develop github:jamespwilliams/nde >> ~/.config/fish/config.fish
 ```
+
+## See also
+
+There are quite a few other neovim IDE layers available:
+
+* https://github.com/AstroNvim/AstroNvim
+* https://www.lunarvim.org/
+
+This project differs from those in two main ways:
+
+* this project is more minimal
+   * this is either a pro or a con, depending on your perspective
+* this project uses Nix, which is reproducible and (arguably) cleaner
+   * this is also either a pro or a con, depending on your perspective!
