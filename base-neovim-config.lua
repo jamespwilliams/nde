@@ -52,8 +52,7 @@ local set_up_treesitter = function()
     }
     vim.opt.runtimepath:append(treesitter_parser_install_dir)
 
-    local ft_to_parser = require "nvim-treesitter.parsers".filetype_to_parsername
-    ft_to_parser.terraform = "hcl" -- the terraform filetype will use the hcl parser and queries.
+    vim.treesitter.language.register('terraform', 'hcl')
 end
 
 local set_up_diagnostic_keybindings = function()
@@ -83,7 +82,7 @@ local set_up_lsps = function()
     lspconfig.terraformls.setup { on_attach = on_lsp_attach }
     lspconfig.tsserver.setup { on_attach = on_lsp_attach }
     lspconfig.vimls.setup { on_attach = on_lsp_attach, isNeovim = true }
-    lspconfig.sumneko_lua.setup {
+    lspconfig.lua_ls.setup {
         on_attach = on_lsp_attach,
         settings = {
             Lua = {
@@ -120,9 +119,11 @@ local set_up_lsps = function()
 end
 
 local set_up_lsp_autoformatting = function()
-    vim.api.nvim_create_autocmd('BufWritePre', {
+    vim.api.nvim_create_autocmd({ 'BufWritePre' }, {
         pattern = { '*' },
-        callback = vim.lsp.buf.formatting_sync,
+        callback = function(ev)
+            vim.lsp.buf.format()
+        end,
         group = lsp_document_format_augroup,
     })
 end
@@ -148,7 +149,7 @@ local set_up_go_autoimports = function()
 
     vim.api.nvim_create_autocmd('BufWritePre', {
         pattern = { '*.go' },
-        callback = function()
+        callback = function(ev)
             organise_imports(1000)
         end,
         group = lsp_document_format_augroup,
