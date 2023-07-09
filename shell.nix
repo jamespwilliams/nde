@@ -26,26 +26,23 @@ let
     };
   };
 
-  overriden-neovim =
-    pkgs.neovim.override {
-      configure = {
-        customRC = vimrc;
-        packages.packages = with pkgs.vimPlugins; {
-          start = [
-            bat-vim
-            fzf-vim
-            nvim-lspconfig
-            (nvim-treesitter.withPlugins (
-              plugins: pkgs.tree-sitter.allGrammars
-            ))
-            rust-tools-nvim
-            sensible
-          ];
-        };
+  overriden-neovim = pkgs.neovim.override {
+    configure = {
+      customRC = vimrc;
+      packages.packages = with pkgs.vimPlugins; {
+        start = [
+          bat-vim
+          fzf-vim
+          nvim-lspconfig
+          (nvim-treesitter.withPlugins (plugins: pkgs.tree-sitter.allGrammars))
+          rust-tools-nvim
+          sensible
+        ];
       };
     };
-in
-with pkgs; mkShell {
+  };
+in with pkgs;
+mkShell {
   nativeBuildInputs = [
     fzf
     go_1_19
