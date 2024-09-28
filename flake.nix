@@ -57,7 +57,6 @@
             nodePackages.vim-language-server
             overriden-neovim
             ripgrep
-            rnix-lsp
             sumneko-lua-language-server
             tmux
 
