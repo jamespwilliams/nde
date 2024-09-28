@@ -52,7 +52,7 @@
         devShell = mkShell {
           nativeBuildInputs = [
             fzf
-            go_1_19
+            go
             gopls
             nodePackages.vim-language-server
             overriden-neovim
