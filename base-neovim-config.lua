@@ -68,6 +68,14 @@ local set_up_lsps = function()
         for key, cmd in pairs(lsp_attach_keymappings) do buf_nnoremap_lua(bufnr, key, cmd) end
     end
 
+    lspconfig.crystalline.setup {
+        on_attach = on_lsp_attach,
+        settings = {
+            format = {
+                enable = false,
+            },
+        },
+    }
     lspconfig.gopls.setup { on_attach = on_lsp_attach }
     lspconfig.perlpls.setup {
         on_attach = on_lsp_attach,
@@ -122,7 +130,9 @@ local set_up_lsp_autoformatting = function()
     vim.api.nvim_create_autocmd({ 'BufWritePre' }, {
         pattern = { '*' },
         callback = function(ev)
-            vim.lsp.buf.format()
+            if vim.bo.filetype ~= 'crystal' then
+                vim.lsp.buf.format()
+            end
         end,
         group = lsp_document_format_augroup,
     })
@@ -167,3 +177,5 @@ set_up_diagnostic_keybindings()
 set_up_fzf()
 set_up_lsp_autoformatting()
 set_up_go_autoimports()
+
+vim.g.crystal_auto_format = 1

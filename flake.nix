@@ -43,6 +43,7 @@
                   (plugins: pkgs.tree-sitter.allGrammars))
                 rust-tools-nvim
                 sensible
+                vim-crystal
               ];
             };
           };
@@ -76,6 +77,9 @@
 
             terraform
             terraform-ls
+
+            crystal
+            crystalline
           ];
         };
 
